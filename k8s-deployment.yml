@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: e-second
-        image: e-second:latest
+        image: maheshmu/e-second:latest
         ports:
         - containerPort: 8095
 ---
