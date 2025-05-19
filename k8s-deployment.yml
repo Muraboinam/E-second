@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: E-second
+  name: e-second
   labels:
-    app: E-second
+    app: e-second
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: E-second
+      app: e-second
   template:
     metadata:
       labels:
-        app: E-second
+        app: e-second
     spec:
       containers:
-      - name: E-second
-        image: E-second:latest
+      - name: e-second
+        image: e-second:latest
         ports:
         - containerPort: 8095
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: E-second
+  name: e-second
 spec:
   type: LoadBalancer
   selector:
-    app: E-second
+    app: e-second
   ports:
     - port: 8096
       targetPort: 8095
