@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: E-second
-        image: E-second:latest
+        image: E-second:${env.BUILD_NUMBER}
         ports:
         - containerPort: 8095
 ---
